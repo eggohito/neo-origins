@@ -1,0 +1,8 @@
+plugins {
+	id 'fabric-loom'
+}
+
+version = project.neo_calio_version
+base {
+	archivesName = "neo-calio"
+}

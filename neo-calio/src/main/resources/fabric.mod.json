@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "neo-calio",
+	"version": "${version}",
+	"name": "NeoCalio",
+	"description": "A prototype for Calio's rewrite",
+	"authors": [
+		"eggohito"
+	],
+	"contact": {
+		"homepage": "https://github.com/eggohito/neo-origins",
+		"sources": "https://github.com/eggohito/neo-origins"
+	},
+	"license": "MIT",
+	"icon": "assets/neo-calio/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.eggohito.neo_calio.NeoCalio"
+		],
+		"client": [
+			"io.github.eggohito.neo_calio.NeoCalioClient"
+		]
+	},
+	"mixins": [
+		"neo-calio.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": ">=0.98.0"
+	}
+}

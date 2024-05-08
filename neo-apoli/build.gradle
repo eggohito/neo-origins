@@ -1,0 +1,14 @@
+plugins {
+	id 'fabric-loom'
+}
+
+version = project.neo_apoli_version
+base {
+	archivesName = "neo-apoli"
+}
+
+evaluationDependsOn(":neo-calio")
+dependencies {
+	implementation(project(path: ":neo-calio", configuration: "namedElements"))
+	include(project(":neo-calio"))
+}
