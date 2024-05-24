@@ -7,7 +7,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.github.eggohito.neo_apoli.content.NeoApoliPowerTypes;
 import io.github.eggohito.neo_apoli.power.Power;
-import io.github.eggohito.neo_calio.data.Configuration;
+import io.github.eggohito.neo_calio.data.Factory;
 import net.minecraft.util.Identifier;
 
 import java.util.Map;
@@ -35,7 +35,7 @@ public class MultiplePowerType extends PowerType {
     }
 
     @Override
-    public Configuration<? extends PowerType> configuration() {
+    public Factory<? extends PowerType> factory() {
         return NeoApoliPowerTypes.MULTIPLE;
     }
 

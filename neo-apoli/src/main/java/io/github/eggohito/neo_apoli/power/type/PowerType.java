@@ -3,7 +3,7 @@ package io.github.eggohito.neo_apoli.power.type;
 import com.mojang.serialization.MapCodec;
 import io.github.eggohito.neo_apoli.power.Power;
 import io.github.eggohito.neo_apoli.registry.NeoApoliRegistries;
-import io.github.eggohito.neo_calio.data.Configuration;
+import io.github.eggohito.neo_calio.data.Factory;
 import net.minecraft.entity.LivingEntity;
 import org.jetbrains.annotations.ApiStatus;
 
@@ -11,7 +11,7 @@ public abstract class PowerType {
 
     public static final MapCodec<PowerType> DISPATCH_CODEC = NeoApoliRegistries.POWER_TYPE
         .getCodec()
-        .dispatchMap("type", PowerType::configuration, Configuration::mapCodec);
+        .dispatchMap("type", PowerType::factory, Factory::mapCodec);
 
     private LivingEntity holder;
     private Power power;
@@ -30,6 +30,6 @@ public abstract class PowerType {
         return power;
     }
 
-    public abstract Configuration<? extends PowerType> configuration();
+    public abstract Factory<? extends PowerType> factory();
 
 }
